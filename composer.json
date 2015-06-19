@@ -1,0 +1,12 @@
+{
+    "require": {
+        "paypal/rest-api-sdk-php": "*",
+        "braintree/braintree_php": "3.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Payment\\": "include/class/Lib/Payment",
+            "App\\": "include/class/App"
+        }
+    }
+}

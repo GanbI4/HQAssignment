@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HQAssignment sample</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+  <div class="container well">
+     <form action="ajax/payment.php">
+        <div class="col-md-6 col-xs-12">
+            <h2>Order</h2>
+            <div class="form-group col-md-8 col-xs-12">
+                <label for="amount">Amount</label>
+                <input class="form-control" type="text" data-id="amount" name="amount" data-valid="amount">
+                <p class="help-block">Example: 9999.99 </p>
+            </div>
+            <div class="form-group col-md-4 col-xs-12">
+                <label for="currency">Currency</label>
+                <select id="currency" name="currency" class="form-control">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="AUD">AUD</option>
+                    <option value="SGD">SGD</option>
+                    <option value="HKD">HKD</option>
+                    <option value="THB">THB</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6 col-xs-12">
+                <label for="customer-fn">Customer First Name</label>
+                <input id="customer-fn" class="form-control" type="text" name="customer_fn" data-valid="customer">
+            </div>
+            <div class="form-group col-md-6 col-xs-12">
+                <label for="customer-ln">Customer Last Name</label>
+                <input id="customer-ln" class="form-control" type="text" name="customer_ln" data-valid="customer">
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <h2>Credit Card</h2>
+            <div class="form-group col-md-12">
+                <label for="nuber">Card number</label>
+                <input id="number" class="form-control" type="text" name="number" data-valid="card_num">
+                <p class="help-block">12 - 19 digit number</p>
+            </div>
+            <div class="form-group col-md-6 col-xs-12">
+                <label for="expire">Expiration</label>
+                <input id="expire" class="form-control" type="text" name="expire" data-valid="expiration">
+                <p class="help-block">Example: 12/2025 </p>
+            </div>
+            <div class="form-group col-md-6 col-xs-12">
+                <label for="ccv">CCV</label>
+                <input id="ccv" class="form-control" type="text" name="ccv" data-valid="ccv">
+                <p class="help-block">3 or 4 digits </p>
+            </div>
+            <div class="form-group col-md-6 col-xs-12">
+                <label for="holder-fn">Holder First Name</label>
+                <input id="holder-fn" class="form-control" type="text" name="holder_fn" data-valid="holder">
+                <p class="help-block">Latin Only</p>
+            </div>
+            <div class="form-group col-md-6 col-xs-12">
+                <label for="holder-ln">Holder Last Name</label>
+                <input id="holder-ln" class="form-control" type="text" name="holder_ln" data-valid="holder">
+                <p class="help-block">Latin only</p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success center-block btn-lg">Submit</button>
+    </form>
+  </div>
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</body>
+</html>
